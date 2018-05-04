@@ -1,0 +1,144 @@
+2018-05-04 14:11:56 [scrapy.utils.log] INFO: Scrapy 1.5.0 started (bot: ItcastTeaSpider)
+2018-05-04 14:11:56 [scrapy.utils.log] INFO: Versions: lxml 4.2.1.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.4.0, w3lib 1.19.0, Twisted 17.9.0, Python 3.5.3 (v3.5.3:1880cb95a742, Jan 16 2017, 16:02:32) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0h  27 Mar 2018), cryptography 2.2.2, Platform Windows-7-6.1.7601-SP1
+2018-05-04 14:11:56 [scrapy.crawler] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'ItcastTeaSpider.spiders', 'LOG_LEVEL': 'INFO', 'SPIDER_MODULES': ['ItcastTeaSpider.spiders'], 'LOG_FILE': 'logs\\ItcastTeaSpider\\tencent\\0b428fa84f6211e899d9e4f89c8629bd.log', 'BOT_NAME': 'ItcastTeaSpider'}
+2018-05-04 14:11:57 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2018-05-04 14:11:57 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'ItcastTeaSpider.middlewares.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-05-04 14:11:57 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-05-04 14:11:57 [scrapy.middleware] INFO: Enabled item pipelines:
+['ItcastTeaSpider.pipelines.TencentJsonPipeline']
+2018-05-04 14:11:57 [scrapy.core.engine] INFO: Spider opened
+2018-05-04 14:11:57 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-05-04 14:12:18 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=750> (referer: https://hr.tencent.com/position.php?&start=740)
+Traceback (most recent call last):
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\pythonOBJ\scrapy_stu\ItcastTeaSpider\ItcastTeaSpider\spiders\tencent.py", line 18, in parse
+    positionInfo = each.xpath('./td[2]/text()').extract()[0]
+IndexError: list index out of range
+2018-05-04 14:12:20 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=810> (referer: https://hr.tencent.com/position.php?&start=800)
+Traceback (most recent call last):
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\pythonOBJ\scrapy_stu\ItcastTeaSpider\ItcastTeaSpider\spiders\tencent.py", line 18, in parse
+    positionInfo = each.xpath('./td[2]/text()').extract()[0]
+IndexError: list index out of range
+2018-05-04 14:12:27 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1060> (referer: https://hr.tencent.com/position.php?&start=1050)
+Traceback (most recent call last):
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\pythonOBJ\scrapy_stu\ItcastTeaSpider\ItcastTeaSpider\spiders\tencent.py", line 18, in parse
+    positionInfo = each.xpath('./td[2]/text()').extract()[0]
+IndexError: list index out of range
+2018-05-04 14:12:36 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1390> (referer: https://hr.tencent.com/position.php?&start=1380)
+Traceback (most recent call last):
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\pythonOBJ\scrapy_stu\ItcastTeaSpider\ItcastTeaSpider\spiders\tencent.py", line 18, in parse
+    positionInfo = each.xpath('./td[2]/text()').extract()[0]
+IndexError: list index out of range
+2018-05-04 14:12:42 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1620> (referer: https://hr.tencent.com/position.php?&start=1610)
+Traceback (most recent call last):
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\pythonOBJ\scrapy_stu\ItcastTeaSpider\ItcastTeaSpider\spiders\tencent.py", line 18, in parse
+    positionInfo = each.xpath('./td[2]/text()').extract()[0]
+IndexError: list index out of range
+2018-05-04 14:12:50 [scrapy.core.scraper] ERROR: Spider error processing <GET https://hr.tencent.com/position.php?&start=1950> (referer: https://hr.tencent.com/position.php?&start=1940)
+Traceback (most recent call last):
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\myvirtua\py3_spider\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\pythonOBJ\scrapy_stu\ItcastTeaSpider\ItcastTeaSpider\spiders\tencent.py", line 18, in parse
+    positionInfo = each.xpath('./td[2]/text()').extract()[0]
+IndexError: list index out of range
+2018-05-04 14:12:50 [scrapy.core.engine] INFO: Closing spider (finished)
+2018-05-04 14:12:50 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 80879,
+ 'downloader/request_count': 197,
+ 'downloader/request_method_count/GET': 197,
+ 'downloader/response_bytes': 766487,
+ 'downloader/response_count': 197,
+ 'downloader/response_status_count/200': 196,
+ 'downloader/response_status_count/301': 1,
+ 'dupefilter/filtered': 771,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 5, 4, 6, 12, 50, 969303),
+ 'item_scraped_count': 966,
+ 'log_count/ERROR': 6,
+ 'log_count/INFO': 7,
+ 'request_depth_max': 195,
+ 'response_received_count': 196,
+ 'scheduler/dequeued': 197,
+ 'scheduler/dequeued/memory': 197,
+ 'scheduler/enqueued': 197,
+ 'scheduler/enqueued/memory': 197,
+ 'spider_exceptions/IndexError': 6,
+ 'start_time': datetime.datetime(2018, 5, 4, 6, 11, 57, 772260)}
+2018-05-04 14:12:50 [scrapy.core.engine] INFO: Spider closed (finished)
